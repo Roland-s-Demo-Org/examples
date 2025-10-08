@@ -2,32 +2,39 @@
     "// To install dependencies with Bazel-managed pnpm, run": "./tools/pnpm install",
     "private": true,
     "devDependencies": {
-      "@eslint/js": "^9.21.0",
-      "eslint": "^9.21.0",
-      "jsdom": "^23.0.1",
-      "vitest": "^1.0.2",
-      "typescript-eslint": "^8.17.0"
+        "@eslint/js": "^9.21.0",
+        "eslint": "^9.21.0",
+        "jsdom": "^23.0.1",
+        "vitest": "^1.0.2",
+        "typescript-eslint": "^8.17.0"
     },
     "pnpm": {
-      "//packageExtensions": "Fix missing dependencies in npm packages, see https://pnpm.io/package_json#pnpmpackageextensions",
-      "packageExtensions": {
-        "@vitejs/plugin-vue": {
-          "peerDependencies": {
-            "vue": "*"
-          }
+        "//packageExtensions": "Fix missing dependencies in npm packages, see https://pnpm.io/package_json#pnpmpackageextensions",
+        "packageExtensions": {
+            "@vitejs/plugin-vue": {
+                "peerDependencies": {
+                    "vue": "*"
+                }
+            },
+            "eslint-config-next": {
+                "peerDependencies": {
+                    "next": "*"
+                }
+            },
+            "postcss-loader": {
+                "peerDependencies": {
+                    "postcss-flexbugs-fixes": "*",
+                    "postcss-preset-env": "*",
+                    "postcss-normalize": "*"
+                }
+            }
         },
-        "eslint-config-next": {
-          "peerDependencies": {
-            "next": "*"
-          }
-        },
-        "postcss-loader": {
-          "peerDependencies": {
-            "postcss-flexbugs-fixes": "*",
-            "postcss-preset-env": "*",
-            "postcss-normalize": "*"
-          }
+        "overrides": {
+            "dset@<=3.1.4": "3.1.4",
+            "@react-router/express@<=7.4.1": "7.4.1",
+            "prismjs@<=1.30.0": "1.30.0",
+            "cookie@<=0.7.0": "0.7.0",
+            "on-headers@<=1.1.0": "1.1.0"
         }
-      }
     }
 }
