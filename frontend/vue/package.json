@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@bazel-example/vue-library": "workspace:*",
-    "vue": "3.2.45",
+    "vue": "3.5.40",
     "vue-router": "4.1.6"
   },
   "devDependencies": {
