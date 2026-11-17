@@ -10,6 +10,9 @@
     },
     "pnpm": {
       "//packageExtensions": "Fix missing dependencies in npm packages, see https://pnpm.io/package_json#pnpmpackageextensions",
+      "overrides": {
+        "esbuild@0": "0.28.1"
+      },
       "packageExtensions": {
         "@vitejs/plugin-vue": {
           "peerDependencies": {
